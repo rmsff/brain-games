@@ -1,0 +1,29 @@
+{
+  "name": "brain-games",
+  "version": "1.0.0",
+  "description": "Brain games",
+  "main": "brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serikoff/project-lvl1-s474.git"
+  },
+  "keywords": [
+    "brain",
+    "games"
+  ],
+  "author": "Serikov Roman",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/serikoff/project-lvl1-s474/issues"
+  },
+  "homepage": "https://github.com/serikoff/project-lvl1-s474#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3"
+  }
+}
