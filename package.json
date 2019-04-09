@@ -1,8 +1,7 @@
 {
-  "name": "@serikoff/brain-games",
+  "name": "brain-games",
   "version": "1.0.0",
   "description": "Brain games",
-  "main": "brain-games.js",
   "bin": {
     "brain-games": "dist/bin/brain-games.js"
   },
@@ -10,9 +9,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,7 +19,7 @@
     "brain",
     "games"
   ],
-  "author": "serikoff",
+  "author": "Serikov Roman",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/serikoff/project-lvl1-s474/issues"
