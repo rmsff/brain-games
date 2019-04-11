@@ -28,6 +28,9 @@
     "url": "https://github.com/serikoff/project-lvl1-s474/issues"
   },
   "homepage": "https://github.com/serikoff/project-lvl1-s474#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
