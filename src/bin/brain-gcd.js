@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { brainGCD } from '..';
+import brainGCD from '../games/game-even';
 
 brainGCD();
