@@ -4,4 +4,4 @@
 [![Build Status](https://travis-ci.org/serikoff/project-lvl1-s474.svg?branch=master)](https://travis-ci.org/serikoff/project-lvl1-s474)
 
 [![asciicast](https://asciinema.org/a/dcsMZKr2ZKJckcXfmJTr46zEm.png)](https://asciinema.org/a/dcsMZKr2ZKJckcXfmJTr46zEm)
-[![asciicast](https://asciinema.org/a/ZUyTScD1Uk4iCbROGSrOKnFM0.png)](https://asciinema.org/a/ZUyTScD1Uk4iCbROGSrOKnFM0)
+[![asciicast](https://asciinema.org/a/3C2WorwGw1x7F689VAs21H7m4.png)](https://asciinema.org/a/3C2WorwGw1x7F689VAs21H7m4)
