@@ -1,25 +1,24 @@
 import {
-  startGame, getRandom, startMessage, isEver,
+  startGame, getRandom, isEven,
 } from '../index';
 
 const brainEven = () => {
-  const userName = startMessage('Answer "yes" if number even otherwise answer "no".');
+  const message = 'Answer "yes" if number even otherwise answer "no".';
 
-  const count = 0;
   const questionFun = (() => {
     const result = {
       a: getRandom(1, 21),
-      game: 'ever',
+      game: 'even',
     };
     return result;
   });
 
   const correctAnswerFun = ((question) => {
     const number = question.a;
-    return (isEver(number) ? 'yes' : 'no');
+    return (isEven(number) ? 'yes' : 'no');
   });
 
-  startGame(count, correctAnswerFun, userName, questionFun);
+  startGame(correctAnswerFun, questionFun, message);
 };
 
 export default brainEven;

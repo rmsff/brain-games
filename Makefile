@@ -12,3 +12,6 @@ publish:
 
 lint:
 	npx eslint .
+
+asciinema:
+	asciinema rec
