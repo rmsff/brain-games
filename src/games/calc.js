@@ -4,7 +4,7 @@ import { getRandom } from '../utils';
 const message = 'What is the result of the expression?';
 
 export const startBrainCalc = () => {
-  const getGame = (() => {
+  const getGame = () => {
     const a = getRandom(0, 10);
     const b = getRandom(0, 10);
     const operator = getRandom(0, 3);
@@ -27,7 +27,7 @@ export const startBrainCalc = () => {
     }
 
     return game;
-  });
+  };
 
   startGame(getGame, message);
 };

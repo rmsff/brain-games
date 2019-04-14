@@ -1,5 +1,5 @@
 import startGame from '../index';
-import { getRandom } from '../utils';
+import getRandom from '../utils';
 
 const message = 'What number is missing in the progression?';
 
@@ -14,7 +14,7 @@ const getQuestion = (step, index, startNum) => {
 };
 
 const startBrainProgress = () => {
-  const getGame = (() => {
+  const getGame = () => {
     const step = getRandom(2, 9);
     const index = getRandom(0, 9);
     const startNum = getRandom(7, 17);
@@ -23,7 +23,7 @@ const startBrainProgress = () => {
       answer: startNum + step * (index + 1),
     };
     return game;
-  });
+  };
 
   startGame(getGame, message);
 };

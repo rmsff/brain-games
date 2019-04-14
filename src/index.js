@@ -5,9 +5,9 @@ const startGame = (getGame, message) => {
   const userName = readlineSync.question('May I have your name?  ');
   console.log(`Hello, ${userName}!`);
   console.log(message);
-
+  const numberOfIterations = 3;
   const iter = (count) => {
-    if (count === 3) {
+    if (count === numberOfIterations) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
