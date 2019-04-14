@@ -1,43 +1,29 @@
-
 import readlineSync from 'readline-sync';
 
-export const isEven = number => number % 2 === 0;
-export const getRandom = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-export const startGame = (funCorrect, funQuestion, message) => {
+const startGame = (func, message) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?  ');
   console.log(`Hello, ${userName}!`);
   console.log(message);
 
-  const getUserAnswer = (value) => {
-    switch (value.game) {
-      case 'even':
-        return readlineSync.question(`Question: ${value.a} => `);
-      case 'calc':
-        return readlineSync.question(`Question: ${value.a} ${value.oper} ${value.b} => `);
-      case 'gcd':
-        return readlineSync.question(`Question: ${value.a} ${value.b} => `);
-      default: return 'error';
-    }
-  };
-
-  const iter = (count, correctAnswerFun, questionFun) => {
+  const iter = (count) => {
     if (count === 3) {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const question = questionFun();
-    const userAnswer = getUserAnswer(question);
-    const correctAnswer = correctAnswerFun(question);
+    const obj = func();
+    const userAnswer = readlineSync.question(obj.ques);
     console.log(`Your answer: ${userAnswer}`);
 
-    if (correctAnswer === userAnswer) {
+    if (String(obj.answer) === userAnswer) {
       console.log('Correct!');
-      iter(count + 1, correctAnswerFun, questionFun);
+      iter(count + 1);
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${obj.answer}'.`);
+      console.log(`Let's try again, ${userName}!`);
     }
   };
-  iter(0, funCorrect, funQuestion);
+  iter(0);
 };
+
+export default startGame;
