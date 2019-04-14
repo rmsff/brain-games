@@ -8,21 +8,8 @@ export const getGCD = (a, b) => {
 };
 
 export const isEven = number => (number % 2 === 0);
-export const isPrime = (num) => {
-  if (num >= 0) {
-    switch (num) {
-      case 0:
-      case 1:
-        return false;
-      case 2:
-        return true;
-      default:
-        for (let i = 2; i < num; i + 1) {
-          if (num % i === 0) return false;
-        }
-        return true;
-    }
-  } else {
-    return false;
-  }
+export const isPrime = (number, divider = 2) => {
+  if (number / 2 < divider) return true;
+  if (number % divider === 0) return false;
+  return isPrime(number, divider + 1);
 };
