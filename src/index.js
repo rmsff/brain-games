@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const startGame = (getObjectFun, message) => {
+const startGame = (getGame, message) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?  ');
   console.log(`Hello, ${userName}!`);
@@ -11,15 +11,15 @@ const startGame = (getObjectFun, message) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const obj = getObjectFun();
-    const userAnswer = readlineSync.question(`Question: ${obj.ques} `);
+    const game = getGame();
+    const userAnswer = readlineSync.question(`Question: ${game.question} `);
     console.log(`Your answer: ${userAnswer}`);
 
-    if (String(obj.answer) === userAnswer) {
+    if (String(game.answer) === userAnswer) {
       console.log('Correct!');
       iter(count + 1);
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${obj.answer}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${game.answer}'.`);
       console.log(`Let's try again, ${userName}!`);
     }
   };

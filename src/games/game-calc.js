@@ -4,32 +4,32 @@ import { getRandom } from '../utils';
 const message = 'What is the result of the expression?';
 
 export const startBrainCalc = () => {
-  const getObjectFun = (() => {
+  const getGame = (() => {
     const a = getRandom(0, 10);
     const b = getRandom(0, 10);
     const operator = getRandom(0, 3);
-    const obj = {};
+    const game = {};
 
     switch (operator) {
       case 0:
-        obj.ques = `${a} + ${b}`;
-        obj.answer = a + b;
+        game.question = `${a} + ${b}`;
+        game.answer = a + b;
         break;
       case 1:
-        obj.ques = `${a} * ${b}`;
-        obj.answer = a * b;
+        game.question = `${a} * ${b}`;
+        game.answer = a * b;
         break;
       case 2:
-        obj.ques = `${a} - ${b}`;
-        obj.answer = a - b;
+        game.question = `${a} - ${b}`;
+        game.answer = a - b;
         break;
       default:
     }
 
-    return obj;
+    return game;
   });
 
-  startGame(getObjectFun, message);
+  startGame(getGame, message);
 };
 
 export default startBrainCalc;

@@ -4,15 +4,15 @@ import { getRandom, isEven } from '../utils';
 const message = 'Answer "yes" if number even otherwise answer "no".';
 
 const startBrainEven = () => {
-  const getObjectFun = (() => {
+  const getGame = (() => {
     const question = getRandom(1, 21);
-    const obj = {};
-    obj.answer = isEven(question) ? 'yes' : 'no';
-    obj.ques = `${question}`;
-    return obj;
+    const game = {};
+    game.answer = isEven(question) ? 'yes' : 'no';
+    game.question = `${question}`;
+    return game;
   });
 
-  startGame(getObjectFun, message);
+  startGame(getGame, message);
 };
 
 export default startBrainEven;

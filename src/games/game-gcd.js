@@ -4,15 +4,15 @@ import { getRandom, getGCD } from '../utils';
 const message = 'Find the greatest common divisor of given numbers.';
 
 const startBrainGCD = () => {
-  const getObjectFun = (() => {
+  const getGame = (() => {
     const a = getRandom(1, 21);
     const b = getRandom(1, 21);
-    const obj = {};
-    obj.answer = getGCD(a, b);
-    obj.ques = `${a} ${b}`;
-    return obj;
+    const game = {};
+    game.answer = getGCD(a, b);
+    game.question = `${a} ${b}`;
+    return game;
   });
-  startGame(getObjectFun, message);
+  startGame(getGame, message);
 };
 
 export default startBrainGCD;
