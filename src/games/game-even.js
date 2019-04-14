@@ -1,13 +1,13 @@
 import startGame from '../index';
-import { getRandom } from '../utils';
+import { getRandom, isEven } from '../utils';
 
 const brainEven = () => {
   const message = 'Answer "yes" if number even otherwise answer "no".';
   const func = (() => {
-    const a = getRandom(1, 21);
+    const question = getRandom(1, 21);
     const obj = {};
-    obj.answer = (a % 2 === 0) ? 'yes' : 'no';
-    obj.ques = `Question: ${a} => `;
+    obj.answer = isEven(question);
+    obj.ques = `${question}`;
     return obj;
   });
 

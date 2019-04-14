@@ -6,3 +6,5 @@ export const getGCD = (a, b) => {
   }
   return Math.abs(a);
 };
+
+export const isEven = number => ((number % 2 === 0) ? 'yes' : 'no');

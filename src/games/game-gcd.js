@@ -9,7 +9,7 @@ const brainGCD = () => {
     const b = getRandom(1, 21);
     const obj = {};
     obj.answer = getGCD(a, b);
-    obj.ques = `Question: ${a} ${b} => `;
+    obj.ques = `${a} ${b}`;
     return obj;
   });
   startGame(func, message);

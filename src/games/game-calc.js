@@ -12,15 +12,15 @@ export const brainCalc = () => {
 
     switch (oper) {
       case 0:
-        obj.ques = `Question: ${a} + ${b} = `;
+        obj.ques = `${a} + ${b}`;
         obj.answer = a + b;
         break;
       case 1:
-        obj.ques = `Question: ${a} * ${b} = `;
+        obj.ques = `${a} * ${b}`;
         obj.answer = a * b;
         break;
       case 2:
-        obj.ques = `Question: ${a} - ${b} = `;
+        obj.ques = `${a} - ${b}`;
         obj.answer = a - b;
         break;
       default: console.log('default switch');
