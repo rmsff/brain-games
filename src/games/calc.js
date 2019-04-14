@@ -1,5 +1,5 @@
 import startGame from '../index';
-import { getRandom } from '../utils';
+import getRandom from '../utils';
 
 const message = 'What is the result of the expression?';
 
