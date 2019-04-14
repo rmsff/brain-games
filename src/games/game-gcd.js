@@ -1,10 +1,10 @@
 import startGame from '../index';
 import { getRandom, getGCD } from '../utils';
 
-const brainGCD = () => {
-  const message = 'Find the greatest common divisor of given numbers.';
+const message = 'Find the greatest common divisor of given numbers.';
 
-  const func = (() => {
+const startBrainGCD = () => {
+  const getObjectFun = (() => {
     const a = getRandom(1, 21);
     const b = getRandom(1, 21);
     const obj = {};
@@ -12,7 +12,7 @@ const brainGCD = () => {
     obj.ques = `${a} ${b}`;
     return obj;
   });
-  startGame(func, message);
+  startGame(getObjectFun, message);
 };
 
-export default brainGCD;
+export default startBrainGCD;

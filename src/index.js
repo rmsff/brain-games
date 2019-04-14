@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const startGame = (getObj, message) => {
+const startGame = (getObjectFun, message) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?  ');
   console.log(`Hello, ${userName}!`);
@@ -11,7 +11,7 @@ const startGame = (getObj, message) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const obj = getObj();
+    const obj = getObjectFun();
     const userAnswer = readlineSync.question(`Question: ${obj.ques} `);
     console.log(`Your answer: ${userAnswer}`);
 

@@ -1,16 +1,16 @@
 import startGame from '../index';
 import { getRandom } from '../utils';
 
-export const brainCalc = () => {
-  const message = 'What is the result of the expression?';
+const message = 'What is the result of the expression?';
 
-  const func = (() => {
+export const startBrainCalc = () => {
+  const getObjectFun = (() => {
     const a = getRandom(0, 10);
     const b = getRandom(0, 10);
-    const oper = getRandom(0, 3);
+    const operator = getRandom(0, 3);
     const obj = {};
 
-    switch (oper) {
+    switch (operator) {
       case 0:
         obj.ques = `${a} + ${b}`;
         obj.answer = a + b;
@@ -23,13 +23,13 @@ export const brainCalc = () => {
         obj.ques = `${a} - ${b}`;
         obj.answer = a - b;
         break;
-      default: console.log('default switch');
+      default:
     }
 
     return obj;
   });
 
-  startGame(func, message);
+  startGame(getObjectFun, message);
 };
 
-export default brainCalc;
+export default startBrainCalc;
