@@ -4,15 +4,17 @@ import getRandom from '../utils';
 const message = 'What is the result of the expression?';
 
 const getOperator = () => {
-  const indexOperator = getRandom(0, 3);
   const arrayOfOperators = ['+', '-', '*'];
+  const startInex = 0;
+  const lastIndex = arrayOfOperators.length;
+  const indexOperator = getRandom(startInex, lastIndex);
   return arrayOfOperators[indexOperator];
 };
 
 export const startBrainCalc = () => {
   const getGameData = () => {
-    const a = getRandom(0, 9);
-    const b = getRandom(0, 9);
+    const a = getRandom(0, 10);
+    const b = getRandom(0, 10);
     const operator = getOperator();
     const gameData = {};
 

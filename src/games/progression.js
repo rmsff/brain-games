@@ -16,8 +16,8 @@ const getQuestion = (step, index, startNum) => {
 
 const startBrainProgress = () => {
   const getGameData = () => {
-    const step = getRandom(2, 8);
-    const hiddenNumberIndex = getRandom(0, 8);
+    const step = getRandom(2, 9);
+    const hiddenNumberIndex = getRandom(0, 9);
     const startNum = getRandom(7, 17);
     const gameData = {
       question: getQuestion(step, hiddenNumberIndex, startNum),
