@@ -15,7 +15,7 @@ const startbBrainPrime = () => {
     const question = getRandom(1, 501);
     const gameData = {};
     gameData.answer = isPrime(question) ? 'yes' : 'no';
-    gameData.question = `${question}`;
+    gameData.question = question;
     return gameData;
   };
 

@@ -15,7 +15,7 @@ const startBrainGCD = () => {
     const a = getRandom(1, 21);
     const b = getRandom(1, 21);
     const gameData = {};
-    gameData.answer = getGCD(a, b);
+    gameData.answer = String(getGCD(a, b));
     gameData.question = `${a} ${b}`;
     return gameData;
   };

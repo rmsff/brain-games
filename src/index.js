@@ -15,13 +15,14 @@ const startGame = (getGameData, message) => {
     const userAnswer = readlineSync.question(`Question: ${gameData.question} `);
     console.log(`Your answer: ${userAnswer}`);
 
-    if (String(gameData.answer) === userAnswer) {
+    if (gameData.answer === userAnswer) {
       console.log('Correct!');
-      iter(count + 1);
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.`);
       console.log(`Let's try again, ${userName}!`);
+      return;
     }
+    iter(count + 1);
   };
   iter(0);
 };

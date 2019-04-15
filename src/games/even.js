@@ -10,7 +10,7 @@ const startBrainEven = () => {
     const question = getRandom(1, 21);
     const gameData = {};
     gameData.answer = isEven(question) ? 'yes' : 'no';
-    gameData.question = `${question}`;
+    gameData.question = question;
     return gameData;
   };
 

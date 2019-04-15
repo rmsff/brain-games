@@ -4,8 +4,8 @@ import getRandom from '../utils';
 const message = 'What is the result of the expression?';
 
 const getOperator = () => {
-  const number = getRandom(0, 3);
-  return ['+', '-', '*'][number];
+  const operatorIndex = getRandom(0, 3);
+  return ['+', '-', '*'][operatorIndex];
 };
 
 export const startBrainCalc = () => {
@@ -18,15 +18,15 @@ export const startBrainCalc = () => {
     switch (operator) {
       case '+':
         gameData.question = `${a} + ${b}`;
-        gameData.answer = a + b;
+        gameData.answer = String(a + b);
         break;
       case '*':
         gameData.question = `${a} * ${b}`;
-        gameData.answer = a * b;
+        gameData.answer = String(a * b);
         break;
       case '-':
         gameData.question = `${a} - ${b}`;
-        gameData.answer = a - b;
+        gameData.answer = String(a - b);
         break;
       default:
     }
