@@ -14,7 +14,7 @@ const getQuestion = (step, index, startNum) => {
 };
 
 const startBrainProgress = () => {
-  const getGame = () => {
+  const getGameData = () => {
     const step = getRandom(2, 9);
     const index = getRandom(0, 9);
     const startNum = getRandom(7, 17);
@@ -25,7 +25,7 @@ const startBrainProgress = () => {
     return gameData;
   };
 
-  startGame(getGame, message);
+  startGame(getGameData, message);
 };
 
 export default startBrainProgress;

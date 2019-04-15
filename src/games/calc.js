@@ -9,7 +9,7 @@ const getOperator = () => {
 };
 
 export const startBrainCalc = () => {
-  const getGame = () => {
+  const getGameData = () => {
     const a = getRandom(0, 10);
     const b = getRandom(0, 10);
     const operator = getOperator();
@@ -34,7 +34,7 @@ export const startBrainCalc = () => {
     return gameData;
   };
 
-  startGame(getGame, message);
+  startGame(getGameData, message);
 };
 
 export default startBrainCalc;

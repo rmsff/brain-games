@@ -11,7 +11,7 @@ const getGCD = (a, b) => {
 };
 
 const startBrainGCD = () => {
-  const getGame = () => {
+  const getGameData = () => {
     const a = getRandom(1, 21);
     const b = getRandom(1, 21);
     const gameData = {};
@@ -19,7 +19,7 @@ const startBrainGCD = () => {
     gameData.question = `${a} ${b}`;
     return gameData;
   };
-  startGame(getGame, message);
+  startGame(getGameData, message);
 };
 
 export default startBrainGCD;
