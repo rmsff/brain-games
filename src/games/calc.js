@@ -13,25 +13,25 @@ export const startBrainCalc = () => {
     const a = getRandom(0, 10);
     const b = getRandom(0, 10);
     const operator = getOperator();
-    const game = {};
+    const gameData = {};
 
     switch (operator) {
       case '+':
-        game.question = `${a} + ${b}`;
-        game.answer = a + b;
+        gameData.question = `${a} + ${b}`;
+        gameData.answer = a + b;
         break;
       case '*':
-        game.question = `${a} * ${b}`;
-        game.answer = a * b;
+        gameData.question = `${a} * ${b}`;
+        gameData.answer = a * b;
         break;
       case '-':
-        game.question = `${a} - ${b}`;
-        game.answer = a - b;
+        gameData.question = `${a} - ${b}`;
+        gameData.answer = a - b;
         break;
       default:
     }
 
-    return game;
+    return gameData;
   };
 
   startGame(getGame, message);

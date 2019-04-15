@@ -13,10 +13,10 @@ const isPrime = (number, divider = 2) => {
 const startbBrainPrime = () => {
   const getGame = () => {
     const question = getRandom(1, 501);
-    const game = {};
-    game.answer = isPrime(question) ? 'yes' : 'no';
-    game.question = `${question}`;
-    return game;
+    const gameData = {};
+    gameData.answer = isPrime(question) ? 'yes' : 'no';
+    gameData.question = `${question}`;
+    return gameData;
   };
 
   startGame(getGame, message);

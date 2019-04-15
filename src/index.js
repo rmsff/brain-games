@@ -11,15 +11,15 @@ const startGame = (getGame, message) => {
       console.log(`Congratulations, ${userName}!`);
       return;
     }
-    const game = getGame();
-    const userAnswer = readlineSync.question(`Question: ${game.question} `);
+    const gameData = getGame();
+    const userAnswer = readlineSync.question(`Question: ${gameData.question} `);
     console.log(`Your answer: ${userAnswer}`);
 
-    if (String(game.answer) === userAnswer) {
+    if (String(gameData.answer) === userAnswer) {
       console.log('Correct!');
       iter(count + 1);
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${game.answer}'.`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.`);
       console.log(`Let's try again, ${userName}!`);
     }
   };

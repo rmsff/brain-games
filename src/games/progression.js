@@ -18,11 +18,11 @@ const startBrainProgress = () => {
     const step = getRandom(2, 9);
     const index = getRandom(0, 9);
     const startNum = getRandom(7, 17);
-    const game = {
+    const gameData = {
       question: getQuestion(step, index, startNum),
       answer: startNum + step * (index + 1),
     };
-    return game;
+    return gameData;
   };
 
   startGame(getGame, message);

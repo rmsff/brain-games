@@ -14,10 +14,10 @@ const startBrainGCD = () => {
   const getGame = () => {
     const a = getRandom(1, 21);
     const b = getRandom(1, 21);
-    const game = {};
-    game.answer = getGCD(a, b);
-    game.question = `${a} ${b}`;
-    return game;
+    const gameData = {};
+    gameData.answer = getGCD(a, b);
+    gameData.question = `${a} ${b}`;
+    return gameData;
   };
   startGame(getGame, message);
 };
