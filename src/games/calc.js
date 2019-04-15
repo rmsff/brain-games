@@ -4,9 +4,7 @@ import getRandom from '../utils';
 const message = 'What is the result of the expression?';
 
 const getOperator = () => {
-  const startIndex = 0;
-  const lastIndex = 2;
-  const indexOperator = getRandom(startIndex, lastIndex);
+  const indexOperator = getRandom(0, 3);
   const arrayOfOperators = ['+', '-', '*'];
   return arrayOfOperators[indexOperator];
 };
