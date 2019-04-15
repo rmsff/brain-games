@@ -5,16 +5,16 @@ const message = 'What is the result of the expression?';
 
 const getOperator = () => {
   const startIndex = 0;
-  const followingTheLastIndex = 3;
-  const indexOperator = getRandom(startIndex, followingTheLastIndex);
+  const lastIndex = 2;
+  const indexOperator = getRandom(startIndex, lastIndex);
   const arrayOfOperators = ['+', '-', '*'];
   return arrayOfOperators[indexOperator];
 };
 
 export const startBrainCalc = () => {
   const getGameData = () => {
-    const a = getRandom(0, 10);
-    const b = getRandom(0, 10);
+    const a = getRandom(0, 9);
+    const b = getRandom(0, 9);
     const operator = getOperator();
     const gameData = {};
 
