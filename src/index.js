@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 
+const numberOfIterations = 3;
+
 const startGame = (getGameData, message) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?  ');
   console.log(`Hello, ${userName}!`);
   console.log(message);
-  const numberOfIterations = 3;
   const iter = (count) => {
     if (count === numberOfIterations) {
       console.log(`Congratulations, ${userName}!`);

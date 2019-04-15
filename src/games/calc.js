@@ -5,7 +5,8 @@ const message = 'What is the result of the expression?';
 
 const getOperator = () => {
   const operatorIndex = getRandom(0, 3);
-  return ['+', '-', '*'][operatorIndex];
+  const arrayOfOperators = ['+', '-', '*'];
+  return arrayOfOperators[operatorIndex];
 };
 
 export const startBrainCalc = () => {
