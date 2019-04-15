@@ -4,9 +4,9 @@ import getRandom from '../utils';
 const message = 'What is the result of the expression?';
 
 const getOperator = () => {
-  const operatorIndex = getRandom(0, 3);
+  const indexOperator = getRandom(0, 3);
   const arrayOfOperators = ['+', '-', '*'];
-  return arrayOfOperators[operatorIndex];
+  return arrayOfOperators[indexOperator];
 };
 
 export const startBrainCalc = () => {
