@@ -5,9 +5,7 @@ const message = 'What is the result of the expression?';
 
 const getOperator = () => {
   const arrayOfOperators = ['+', '-', '*'];
-  const startInex = 0;
-  const lastIndex = arrayOfOperators.length;
-  const indexOperator = getRandom(startInex, lastIndex);
+  const indexOperator = getRandom(0, arrayOfOperators.length);
   return arrayOfOperators[indexOperator];
 };
 
