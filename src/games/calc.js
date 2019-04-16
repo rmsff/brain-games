@@ -2,11 +2,11 @@ import startGame from '../index';
 import getRandom from '../utils';
 
 const message = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
 
 const getOperator = () => {
-  const arrayOfOperators = ['+', '-', '*'];
-  const indexOperator = getRandom(0, arrayOfOperators.length);
-  return arrayOfOperators[indexOperator];
+  const indexOperator = getRandom(0, operators.length);
+  return operators[indexOperator];
 };
 
 export const startBrainCalc = () => {
