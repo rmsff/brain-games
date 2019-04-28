@@ -23,18 +23,14 @@ const startGame = (getGameData, message) => {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.`);
       console.log(`Let's try again, ${userName}!`);
       // eslint-disable-next-line no-use-before-define
-      replay();
       return;
     }
     iter(count + 1);
   };
 
   const replay = () => {
-    const answerReplay = readlineSync.question('To play again? (yes/no) ');
-
-    if (answerReplay === 'yes') {
-      const answerReplaySameGame = readlineSync.question('Play the same game? (yes/no) ');
-      if (answerReplaySameGame === 'yes') {
+    if (readlineSync.question('To play again? (yes/no) ') === 'yes') {
+      if (readlineSync.question('Play the same game? (yes/no) ') === 'yes') {
         iter(0);
       } else {
         console.log('Choose a game from the list and just enter the name of the game!\nbrain-calc\nbrain-even\nbrain-gcd\nbrain-prime\nbrain-progression');
