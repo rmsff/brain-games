@@ -23,6 +23,7 @@ const startGame = (getGameData, message) => {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.`);
       console.log(`Let's try again, ${userName}!`);
       // eslint-disable-next-line no-use-before-define
+      replay();
       return;
     }
     iter(count + 1);
