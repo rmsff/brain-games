@@ -18,29 +18,20 @@ This repository is created and maintained by a student of the Hexlet educational
 $ sudo npm install -g @serikoff/brain-games
 ```
 
-## play
+## Play
 
 ```sh
 $ brain-games
 ```
 
 
-Game brain-even asciinema:
-
-[![asciicast](https://asciinema.org/a/dcsMZKr2ZKJckcXfmJTr46zEm.png)](https://asciinema.org/a/dcsMZKr2ZKJckcXfmJTr46zEm)
-
-Game brain-calc asciinema:
-
-[![asciicast](https://asciinema.org/a/3C2WorwGw1x7F689VAs21H7m4.png)](https://asciinema.org/a/3C2WorwGw1x7F689VAs21H7m4)
-
-Game brain-gcd asciinema:
-
-[![asciicast](https://asciinema.org/a/PtB8F591jY0uJPo60HyflQctw.png)](https://asciinema.org/a/PtB8F591jY0uJPo60HyflQctw)
-
-Game brain-progression asciinema:
-
-[![asciicast](https://asciinema.org/a/deZybaUoa1zVzWRYnbsb6lsKe.png)](https://asciinema.org/a/deZybaUoa1zVzWRYnbsb6lsKe)
-
-Game brain-prime asciinema:
-
-[![asciicast](https://asciinema.org/a/fPAEuXjBBYvwUJIGm78tGETGx.png)](https://asciinema.org/a/fPAEuXjBBYvwUJIGm78tGETGx)
+## If you are using Linux and you have the error 
+```sh
+$ brain-games
+/usr/bin/env: 'node': No such file or directory
+```
+then enter the command 
+```sh
+$ sudo ln -s $(which nodejs) /usr/local/bin/node
+```
+This should solve the problem.

@@ -10,6 +10,7 @@ const startGame = (getGameData, message) => {
   const iter = (count) => {
     if (count === numberOfIterations) {
       console.log(`Congratulations, ${userName}!`);
+      // eslint-disable-next-line no-use-before-define
       replay();
       return;
     }
@@ -22,6 +23,7 @@ const startGame = (getGameData, message) => {
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.`);
       console.log(`Let's try again, ${userName}!`);
+      // eslint-disable-next-line no-use-before-define
       replay();
       return;
     }
@@ -37,7 +39,6 @@ const startGame = (getGameData, message) => {
         iter(0);
       } else {
         console.log('Choose a game from the list and just enter the name of the game!\nbrain-calc\nbrain-even\nbrain-gcd\nbrain-prime\nbrain-progression');
-        return;
       }
     } else {
       console.log('Game over!\nBye-Bye!');
