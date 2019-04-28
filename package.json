@@ -1,6 +1,6 @@
 {
   "name": "@serikoff/brain-games",
-  "version": "1.4.14",
+  "version": "1.4.15",
   "description": "Brain games",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
