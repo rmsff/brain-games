@@ -6,10 +6,9 @@ const startGame = (getGameData, message) => {
   console.log(message);
   const numberOfIterations = Number(readlineSync.question('How many questions do you want to answer? '));
 
-  const iter = (count) => {
+  const iter = (count, replay) => {
     if (count === numberOfIterations) {
       console.log(`Congratulations, ${userName}!`);
-      // eslint-disable-next-line no-use-before-define
       replay();
       return;
     }
@@ -22,7 +21,6 @@ const startGame = (getGameData, message) => {
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${gameData.answer}'.`);
       console.log(`Let's try again, ${userName}!`);
-      // eslint-disable-next-line no-use-before-define
       replay();
       return;
     }
@@ -41,7 +39,7 @@ const startGame = (getGameData, message) => {
     }
   };
 
-  iter(0);
+  iter(0, replay);
 };
 
 export default startGame;
